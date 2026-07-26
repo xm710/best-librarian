@@ -1,0 +1,556 @@
+{
+    "binding_curse": {
+        "name": "綁定詛咒",
+        "max_level": 1,
+        "is_treasure": true,
+        "description": "受影響物品在裝備時不能被卸下，玩家處於創造模式則不受影響",
+        "tag": [
+			"Helmet",
+			"Chestplate",
+			"Leggings",
+			"Boots",
+			"Elytra",
+            "Pumpkin",
+            "Head/Skull",
+			"Turtle Shell"
+        ]
+    },
+
+    "vanishing_curse": {
+        "name": "消失詛咒",
+        "max_level": 1,
+        "is_treasure": true,
+        "description": "在生物死亡時，受影響物品會消失而不掉落",
+        "tag": [
+            "Pickaxe",
+            "Shovel",
+            "Axe",
+            "Fishing Rod",
+            "Helmet",
+            "Chestplate",
+            "Leggings",
+            "Boots",
+            "Sword",
+            "Bow",
+            "Crossbow",
+            "Hoe",
+            "Shears",
+            "Flint and Steel",
+            "Shield",
+            "Elytra",
+            "Pumpkin",
+            "Head/Skull",
+            "Trident",
+            "Turtle Shell",
+            "Compass",
+            "Warped Fungus on a Stick",
+            "Brush",
+            "Mace",
+            "Spear"
+        ]
+    },
+
+    "mending": {
+        "name": "修補",
+        "max_level": 1,
+        "is_treasure": true,
+        "description": "損耗獲得的經驗以修補工具或盔甲的耐久度",
+        "tag": [
+            "Helmet",
+            "Chestplate",
+            "Leggings",
+            "Boots",
+			"Pickaxe",
+            "Shovel",
+            "Axe",
+            "Fishing Rod",
+            "Sword",
+            "Bow",
+            "Hoe",
+            "Shears",
+            "Flint and Steel",
+			"Carrot on a Stick",
+            "Shield",
+            "Elytra",
+            "Trident",
+            "Crossbow",
+            "Warped Fungus on a Stick",
+            "Brush",
+            "Mace",
+            "Turtle Shell",
+            "Spear"
+        ]
+    },
+
+    "unbreaking": {
+        "name": "耐久",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "減少觸發耐久消耗的機率",
+        "tag": [
+            "Pickaxe",
+            "Shovel",
+            "Axe",
+            "Fishing Rod",
+			"Helmet",
+            "Chestplate",
+            "Leggings",
+            "Boots",
+            "Sword",
+            "Bow",
+            "Trident",
+            "Turtle Shell",
+            "Hoe",
+            "Crossbow",
+            "Shears",
+            "Flint and Steel",
+			"Carrot on a Stick",
+            "Shield",
+            "Elytra",
+            "Warped Fungus on a Stick",
+            "Brush",
+            "Mace",
+            "Spear"
+        ]
+    },
+
+    "protection": {
+        "name": "保護",
+        "max_level": 4,
+        "is_treasure": false,
+        "description": "減少受到的大多數種類的傷害",
+        "tag": [
+			"Helmet",
+			"Chestplate",
+			"Leggings",
+			"Boots",
+			"Turtle Shell"
+        ]
+    },
+
+    "fire_protection": {
+        "name": "火焰保護",
+        "max_level": 4,
+        "is_treasure": false,
+        "description": "減少受到的火焰傷害和燃燒時間",
+        "tag": [
+			"Helmet",
+			"Chestplate",
+			"Leggings",
+			"Boots",
+			"Turtle Shell"
+        ]
+    },
+
+    "blast_protection": {
+        "name": "爆炸保護",
+        "max_level": 4,
+        "is_treasure": false,
+        "description": "減少受到的爆炸傷害，減少受到的爆炸擊退",
+        "tag": [
+			"Helmet",
+			"Chestplate",
+			"Leggings",
+			"Boots",
+			"Turtle Shell"
+        ]
+    },
+
+    "projectile_protection": {
+        "name": "投射物保護",
+        "max_level": 4,
+        "is_treasure": false,
+        "description": "減少受到的投射物傷害",
+        "tag": [
+			"Helmet",
+			"Chestplate",
+			"Leggings",
+			"Boots",
+			"Turtle Shell"
+        ]
+    },
+
+    "thorns": {
+        "name": "尖刺",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "給予攻擊者傷害",
+        "tag": [
+			"Helmet",
+			"Chestplate",
+			"Leggings",
+			"Boots",
+			"Turtle Shell"
+        ]
+    },
+
+    "respiration": {
+        "name": "水中呼吸",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "延長水中呼吸時間",
+        "tag": [
+			"Helmet",
+			"Turtle Shell"
+        ]
+    },
+
+    "aqua_affinity": {
+        "name": "親水性",
+        "max_level": 1,
+        "is_treasure": false,
+        "description": "增加水下挖掘速度",
+        "tag": [
+            "Helmet",
+            "Turtle Shell"
+        ]
+    },
+
+    "swift_sneak": {
+        "name": "迅捷潛行",
+        "max_level": 3,
+        "is_treasure": true,
+        "description": "提高玩家潛行、爬行時的移動速度",
+        "tag": [
+			"Leggings",
+
+            "DISABLE"
+        ]
+    },
+
+    "feather_falling": {
+        "name": "輕盈",
+        "max_level": 4,
+        "is_treasure": false,
+        "description": "減少受到的摔落傷害",
+        "tag": [
+			"Boots"
+        ]
+    },
+
+    "depth_strider": {
+        "name": "深海漫遊",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "增加水下游泳和行走速度",
+        "tag": [
+			"Boots"
+        ]
+    },
+
+    "frost_walker": {
+        "name": "冰霜行者",
+        "max_level": 2,
+        "is_treasure": true,
+        "description": "使在水面行走時產生霜冰，且不會受到岩漿塊和營火的傷害",
+        "tag": [
+			"Boots"
+        ]
+    },
+
+    "soul_speed": {
+        "name": "靈魂疾走",
+        "max_level": 3,
+        "is_treasure": true,
+        "description": "增加玩家在靈魂砂和靈魂土上的移動速度",
+        "tag": [
+			"Boots",
+
+            "DISABLE"
+        ]
+    },
+
+    "efficiency": {
+        "name": "效率",
+        "max_level": 5,
+        "is_treasure": false,
+        "description": "加快挖掘速度",
+        "tag": [
+            "Pickaxe",
+            "Shovel",
+            "Axe",
+			"Hoe",
+			"Shears"
+        ]
+    },
+
+    "silk_touch": {
+        "name": "絲綢之觸",
+        "max_level": 1,
+        "is_treasure": false,
+        "description": "使部分被開採的方塊改為掉落其方塊物品，而非其他物品",
+        "tag": [
+			"Pickaxe",
+            "Shovel",
+            "Axe",
+			"Hoe"
+        ]
+    },
+
+    "fortune": {
+        "name": "幸運",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "增加方塊掉落物的數量或機率",
+        "tag": [
+            "Pickaxe",
+            "Shovel",
+            "Axe",
+			"Hoe"
+        ]
+    },
+
+    "luck_of_the_sea": {
+        "name": "海洋的祝福",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "增加釣魚時獲得寶藏的機率",
+        "tag": [
+			"Fishing Rod"
+        ]
+    },
+
+    "lure": {
+        "name": "魚餌",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "減少釣魚所需的時間",
+        "tag": [
+			"Fishing Rod"
+        ]
+    },
+
+    "sharpness": {
+        "name": "鋒利",
+        "max_level": 5,
+        "is_treasure": false,
+        "description": "增加近戰攻擊傷害",
+        "tag": [
+			"Sword",
+			"Axe",
+			"Spear"
+        ]
+    },
+
+    "smite": {
+        "name": "不死剋星",
+        "max_level": 5,
+        "is_treasure": false,
+        "description": "對不死生物造成額外傷害",
+        "tag": [
+			"Sword",
+			"Axe",
+			"Mace",
+			"Spear"
+        ]
+    },
+
+    "bane_of_arthropods": {
+        "name": "節肢剋星",
+        "max_level": 5,
+        "is_treasure": false,
+        "description": "對節肢生物造成額外傷害並附加緩速效果",
+        "tag": [
+			"Sword",
+            "Axe",
+			"Mace",
+			"Spear"
+        ]
+    },
+
+    "fire_aspect": {
+        "name": "燃燒",
+        "max_level": 2,
+        "is_treasure": false,
+        "description": "使被近戰攻擊目標著火",
+        "tag": [
+			"Sword",
+			"Mace",
+			"Spear"
+        ]
+    },
+
+    "knockback": {
+        "name": "擊退",
+        "max_level": 2,
+        "is_treasure": false,
+        "description": "增加近戰攻擊造成的擊退距離",
+        "tag": [
+			"Sword",
+			"Spear"
+        ]
+    },
+
+    "looting": {
+        "name": "掠奪",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "增加生物掉落物的數量或機率",
+        "tag": [
+			"Sword",
+			"Spear"
+        ]
+    },
+
+    "sweeping_edge": {
+        "name": "橫掃之刃",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "增加橫掃攻擊傷害",
+        "tag": [
+			"Sword"
+        ]
+    },
+
+    "lunge": {
+        "name": "突刺",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "進行戳刺攻擊時在攻擊方向上移動一段距離",
+        "tag": [
+			"Spear"
+        ]
+    },
+
+    "breach": {
+        "name": "破甲",
+        "max_level": 4,
+        "is_treasure": false,
+        "description": "降低攻擊目標的盔甲對攻擊傷害的減少效果",
+        "tag": [
+			"Mace"
+        ]
+    },
+
+    "density": {
+        "name": "緻密",
+        "max_level": 5,
+        "is_treasure": false,
+        "description": "增加重錘下落攻擊所造成的傷害",
+        "tag": [
+			"Mace"
+        ]
+    },
+
+    "wind_burst": {
+        "name": "風爆",
+        "max_level": 3,
+        "is_treasure": true,
+        "description": "使重錘下落時擊中目標後產生風爆，將攻擊者向上彈起",
+        "tag": [
+			"Mace",
+
+            "DISABLE"
+        ]
+    },
+
+    "power": {
+        "name": "強力",
+        "max_level": 5,
+        "is_treasure": false,
+        "description": "增加箭傷害",
+        "tag": [
+			"Bow"
+        ]
+    },
+
+    "flame": {
+        "name": "火焰",
+        "max_level": 1,
+        "is_treasure": false,
+        "description": "使射出的箭著火",
+        "tag": [
+			"Bow"
+        ]
+    },
+
+    "punch": {
+        "name": "衝擊",
+        "max_level": 2,
+        "is_treasure": false,
+        "description": "增加箭的擊退距離",
+        "tag": [
+			"Bow"
+        ]
+    },
+
+    "infinity": {
+        "name": "無限",
+        "max_level": 1,
+        "is_treasure": false,
+        "description": "射箭時不會消耗箭，不包括藥水箭和追跡之箭",
+        "tag": [
+			"Bow"
+        ]
+    },
+
+    "multishot": {
+        "name": "分裂箭矢",
+        "max_level": 1,
+        "is_treasure": false,
+        "description": "裝填時消耗一個物品以裝填三個該物品",
+        "tag": [
+			"Crossbow"
+        ]
+    },
+
+    "piercing": {
+        "name": "貫穿",
+        "max_level": 4,
+        "is_treasure": false,
+        "description": "使箭穿過多個實體",
+        "tag": [
+			"Crossbow"
+        ]
+    },
+
+    "quick_charge": {
+        "name": "快速上弦",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "減少弩的填裝時間",
+        "tag": [
+			"Crossbow"
+        ]
+    },
+
+    "channeling": {
+        "name": "喚雷",
+        "max_level": 1,
+        "is_treasure": false,
+        "description": "使三叉戟擊中實體時召喚閃電，僅在暴風雨且被命中實體暴露於雨下時生效",
+        "tag": [
+			"Trident"
+        ]
+    },
+
+    "impaling": {
+        "name": "魚叉",
+        "max_level": 5,
+        "is_treasure": false,
+        "description": "對水生生物造成額外傷害",
+        "tag": [
+			"Trident"
+        ]
+    },
+
+    "loyalty": {
+        "name": "忠誠",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "使擲出後的三叉戟返回，附魔等級越高，三叉戟返回所需時間越短",
+        "tag": [
+			"Trident"
+        ]
+    },
+
+    "riptide": {
+        "name": "波濤",
+        "max_level": 3,
+        "is_treasure": false,
+        "description": "將玩家向擲出三叉戟的方向發射，僅在水中或雨中生效",
+        "tag": [
+			"Trident"
+        ]
+    }
+}
