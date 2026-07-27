@@ -1,0 +1,30 @@
+<RCC>
+  <qresource prefix="icons">
+    <file alias="頭顱">icon/BlockSprite_all-heads.webp</file>
+    <file alias="南瓜頭">icon/BlockSprite_carved-pumpkin.webp</file>
+    <file alias="斧">icon/ItemSprite_axe.webp</file>
+    <file alias="靴子">icon/ItemSprite_boots.webp</file>
+    <file alias="弓">icon/ItemSprite_bow.webp</file>
+    <file alias="刷子">icon/ItemSprite_brush.png</file>
+    <file alias="胡蘿蔔釣竿">icon/ItemSprite_carrot-on-a-stick.png</file>
+    <file alias="胸甲">icon/ItemSprite_chestplate.webp</file>
+    <file alias="羅盤">icon/ItemSprite_compass.webp</file>
+    <file alias="弩">icon/ItemSprite_crossbow.webp</file>
+    <file alias="鞘翅">icon/ItemSprite_elytra.webp</file>
+    <file alias="釣竿">icon/ItemSprite_fishing-rod.webp</file>
+    <file alias="打火石">icon/ItemSprite_flint-and-steel.webp</file>
+    <file alias="頭盔">icon/ItemSprite_helmet.webp</file>
+    <file alias="鋤">icon/ItemSprite_hoe.webp</file>
+    <file alias="護腿">icon/ItemSprite_iron-leggings.png</file>
+    <file alias="鏟">icon/ItemSprite_iron-shovel.webp</file>
+    <file alias="矛">icon/ItemSprite_iron-spear.webp</file>
+    <file alias="劍">icon/ItemSprite_iron-sword.webp</file>
+    <file alias="重錘">icon/ItemSprite_mace.webp</file>
+    <file alias="剪刀">icon/ItemSprite_shears.webp</file>
+    <file alias="盾牌">icon/ItemSprite_shield.webp</file>
+    <file alias="三叉戟">icon/ItemSprite_trident.webp</file>
+    <file alias="海龜殼">icon/ItemSprite_turtle-helmet.webp</file>
+    <file alias="扭曲蕈菇釣竿">icon/ItemSprite_warped-fungus-on-a-stick.png</file>
+    <file alias="鎬">icon/ItemSprite_iron-pickaxe.webp</file>
+  </qresource>
+</RCC>
