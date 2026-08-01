@@ -1,20 +1,14 @@
-from amulet import load_level
-from amulet_nbt import (
-    StringTag
-)
+from PySide6.QtWidgets import QApplication
 
-import copy
+from ui.widgets.mainWindowWidget import MainWindow
 
-level = load_level("C://Users/Owner/Desktop/.minecraft/versions/26.2-Fabric 0.19.3/saves/新的世界")
+def run():
+    app = QApplication.instance() or QApplication([])
 
-entities, version = level.get_native_entities(0, 0, "minecraft:overworld")
+    window = MainWindow()
+    window.show()
 
-villager = entities[0]
-nbt = villager.nbt
+    app.exec()
 
-
-
-level.set_native_entites(0, 0, "minecraft:overworld", entities)
-
-level.save()
-level.close()
+if __name__ == "__main__":
+    run()
