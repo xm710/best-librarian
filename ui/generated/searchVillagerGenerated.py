@@ -103,15 +103,15 @@ class Ui_SearchVillager(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.villagerSelectorComboBox = QComboBox(self.layoutWidget)
-        self.villagerSelectorComboBox.setObjectName(u"villagerSelectorComboBox")
-        sizePolicy.setHeightForWidth(self.villagerSelectorComboBox.sizePolicy().hasHeightForWidth())
-        self.villagerSelectorComboBox.setSizePolicy(sizePolicy)
-        self.villagerSelectorComboBox.setMinimumSize(QSize(460, 30))
-        self.villagerSelectorComboBox.setMaximumSize(QSize(460, 30))
-        self.villagerSelectorComboBox.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.librarianSelectorComboBox = QComboBox(self.layoutWidget)
+        self.librarianSelectorComboBox.setObjectName(u"librarianSelectorComboBox")
+        sizePolicy.setHeightForWidth(self.librarianSelectorComboBox.sizePolicy().hasHeightForWidth())
+        self.librarianSelectorComboBox.setSizePolicy(sizePolicy)
+        self.librarianSelectorComboBox.setMinimumSize(QSize(460, 30))
+        self.librarianSelectorComboBox.setMaximumSize(QSize(460, 30))
+        self.librarianSelectorComboBox.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
 
-        self.horizontalLayout.addWidget(self.villagerSelectorComboBox)
+        self.horizontalLayout.addWidget(self.librarianSelectorComboBox)
 
         self.horizontalLayout.setStretch(0, 80)
         self.horizontalLayout.setStretch(1, 80)

@@ -1199,7 +1199,7 @@
         <property name="title">
          <string>等級1</string>
         </property>
-        <widget class="QSpinBox" name="enchantLevelLV1">
+        <widget class="QSpinBox" name="enchantmentLevelLV1">
          <property name="geometry">
           <rect>
            <x>140</x>
@@ -1252,7 +1252,7 @@
           <string>附魔等級</string>
          </property>
         </widget>
-        <widget class="QSpinBox" name="enchantPriceLV1">
+        <widget class="QSpinBox" name="enchantedBookPriceLV1">
          <property name="geometry">
           <rect>
            <x>240</x>
@@ -1296,7 +1296,7 @@
           <string>價格</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="enchantNameLV1">
+        <widget class="QLineEdit" name="enchantmentNameLV1">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -1337,7 +1337,7 @@
         <property name="title">
          <string>等級2</string>
         </property>
-        <widget class="QSpinBox" name="enchantLevelLV2">
+        <widget class="QSpinBox" name="enchantmentLevelLV2">
          <property name="geometry">
           <rect>
            <x>140</x>
@@ -1393,7 +1393,7 @@
           <string>附魔等級</string>
          </property>
         </widget>
-        <widget class="QSpinBox" name="enchantPriceLV2">
+        <widget class="QSpinBox" name="enchantedBookPriceLV2">
          <property name="geometry">
           <rect>
            <x>240</x>
@@ -1437,7 +1437,7 @@
           <string>價格</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="enchantNameLV2">
+        <widget class="QLineEdit" name="enchantmentNameLV2">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -1478,7 +1478,7 @@
         <property name="title">
          <string>等級3</string>
         </property>
-        <widget class="QSpinBox" name="enchantLevelLV3">
+        <widget class="QSpinBox" name="enchantmentLevelLV3">
          <property name="geometry">
           <rect>
            <x>140</x>
@@ -1534,7 +1534,7 @@
           <string>附魔等級</string>
          </property>
         </widget>
-        <widget class="QSpinBox" name="enchantPriceLV3">
+        <widget class="QSpinBox" name="enchantedBookPriceLV3">
          <property name="geometry">
           <rect>
            <x>240</x>
@@ -1578,7 +1578,7 @@
           <string>價格</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="enchantNameLV3">
+        <widget class="QLineEdit" name="enchantmentNameLV3">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -1619,7 +1619,7 @@
         <property name="title">
          <string>等級4</string>
         </property>
-        <widget class="QSpinBox" name="enchantLevelLV4">
+        <widget class="QSpinBox" name="enchantmentLevelLV4">
          <property name="geometry">
           <rect>
            <x>140</x>
@@ -1675,7 +1675,7 @@
           <string>附魔等級</string>
          </property>
         </widget>
-        <widget class="QSpinBox" name="enchantPriceLV4">
+        <widget class="QSpinBox" name="enchantedBookPriceLV4">
          <property name="geometry">
           <rect>
            <x>240</x>
@@ -1719,7 +1719,7 @@
           <string>價格</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="enchantNameLV4">
+        <widget class="QLineEdit" name="enchantmentNameLV4">
          <property name="geometry">
           <rect>
            <x>10</x>

@@ -226,7 +226,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QComboBox" name="villagerSelectorComboBox">
+       <widget class="QComboBox" name="librarianSelectorComboBox">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>

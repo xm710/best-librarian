@@ -4,14 +4,43 @@ from ui.generated.searchVillagerGenerated import Ui_SearchVillager
 class SearchVillagerWidget(BaseWidget):
     ui: Ui_SearchVillager
 
-    def __init__(self):
+    def __init__(self, villager_service, librarian_service):
         super().__init__(Ui_SearchVillager())
+
+        self.librarians = None
+
+        self.villager_service = villager_service
+        self.librarian_service = librarian_service
+
+        self.bind_event()
 
     def reset(self):
         ui = self.ui
+
+        self.librarians = None
 
         ui.posXSpinBox.setValue(0)
         ui.posYSpinBox.setValue(0)
         ui.posZSpinBox.setValue(0)
         ui.searchButton.setChecked(False)
-        ui.villagerSelectorComboBox.clear()
+        ui.librarianSelectorComboBox.clear()
+
+    def bind_event(self):
+        self.ui.searchButton.clicked.connect(
+            self.search_button_on_click
+        )
+
+    def search_button_on_click(self):
+        x = self.ui.posXSpinBox.value()
+        y = self.ui.posYSpinBox.value()
+        z = self.ui.posZSpinBox.value()
+
+        villagers = self.villager_service.get_villagers_by_block(x, y, z)
+        self.librarians = self.librarian_service.get_librarians(villagers)
+        self.ui.librarianSelectorComboBox.clear()
+        for librarian in self.librarians:
+            self.ui.librarianSelectorComboBox.addItem(
+                self.librarian_service.format_display(librarian),
+                librarian
+            )
+        self.ui.librarianSelectorComboBox.setCurrentIndex(-1)

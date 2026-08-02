@@ -7,7 +7,5 @@ class BaseWidget(QWidget):
         self.ui = ui
         self.ui.setupUi(self)
 
-        self.bind_event()
-
     def bind_event(self):
         pass
