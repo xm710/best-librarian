@@ -63,7 +63,7 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QLineEdit" name="levelFilePathLineEdit">
+     <widget class="QLineEdit" name="worldFolderPathLineEdit">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -88,7 +88,7 @@
        </font>
       </property>
       <property name="placeholderText">
-       <string notr="true">level.dat</string>
+       <string notr="true">world folder</string>
       </property>
      </widget>
     </item>

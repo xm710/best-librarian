@@ -5,5 +5,9 @@ class BaseWidget(QWidget):
         super().__init__()
 
         self.ui = ui
-
         self.ui.setupUi(self)
+
+        self.bind_event()
+
+    def bind_event(self):
+        pass

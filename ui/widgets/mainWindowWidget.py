@@ -5,13 +5,17 @@ from ui.widgets.modifyLibrarianWidget import ModifyLibrarianWidget
 
 from ui.generated.mainWindowGenerated import Ui_MainWindow
 
+from services.worldService import WorldService
+
 class MainWindow(BaseWidget):
     ui: Ui_MainWindow
 
     def __init__(self):
         super().__init__(Ui_MainWindow())
+
+        self.world_service = WorldService()
         
-        self.worldImportWidget = WorldImportWidget()
+        self.worldImportWidget = WorldImportWidget(self.world_service)
         self.searchVillagerWidget = SearchVillagerWidget()
         self.modifyLibrarianWidget = ModifyLibrarianWidget()
 

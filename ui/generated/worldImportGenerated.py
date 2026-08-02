@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'WorldImportWidget.ui'
+## Form generated from reading UI file 'WorldImportDesign.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.11.1
 ##
@@ -39,18 +39,18 @@ class Ui_WorldImport(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setSizeConstraint(QLayout.SizeConstraint.SetDefaultConstraint)
         self.horizontalLayout.setContentsMargins(10, 0, 10, 0)
-        self.levelFilePath = QLineEdit(self.layoutWidget)
-        self.levelFilePath.setObjectName(u"levelFilePath")
-        sizePolicy.setHeightForWidth(self.levelFilePath.sizePolicy().hasHeightForWidth())
-        self.levelFilePath.setSizePolicy(sizePolicy)
-        self.levelFilePath.setMinimumSize(QSize(650, 30))
-        self.levelFilePath.setMaximumSize(QSize(650, 30))
+        self.worldFolderPathLineEdit = QLineEdit(self.layoutWidget)
+        self.worldFolderPathLineEdit.setObjectName(u"worldFolderPathLineEdit")
+        sizePolicy.setHeightForWidth(self.worldFolderPathLineEdit.sizePolicy().hasHeightForWidth())
+        self.worldFolderPathLineEdit.setSizePolicy(sizePolicy)
+        self.worldFolderPathLineEdit.setMinimumSize(QSize(650, 30))
+        self.worldFolderPathLineEdit.setMaximumSize(QSize(650, 30))
         font = QFont()
         font.setPointSize(12)
-        self.levelFilePath.setFont(font)
-        self.levelFilePath.setPlaceholderText(u"level.dat")
+        self.worldFolderPathLineEdit.setFont(font)
+        self.worldFolderPathLineEdit.setPlaceholderText(u"world folder")
 
-        self.horizontalLayout.addWidget(self.levelFilePath)
+        self.horizontalLayout.addWidget(self.worldFolderPathLineEdit)
 
         self.browseButton = QPushButton(self.layoutWidget)
         self.browseButton.setObjectName(u"browseButton")

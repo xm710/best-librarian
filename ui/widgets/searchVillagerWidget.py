@@ -10,8 +10,8 @@ class SearchVillagerWidget(BaseWidget):
     def reset(self):
         ui = self.ui
 
-        ui.posX.setValue(0)
-        ui.posY.setValue(0)
-        ui.posZ.setValue(0)
+        ui.posXSpinBox.setValue(0)
+        ui.posYSpinBox.setValue(0)
+        ui.posZSpinBox.setValue(0)
         ui.searchButton.setChecked(False)
-        ui.villagerSelector.clear()
+        ui.villagerSelectorComboBox.clear()
