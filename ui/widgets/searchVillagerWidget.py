@@ -1,16 +1,20 @@
-from ui.widgets.baseWidget import BaseWidget
+from PySide6.QtWidgets import QWidget
+
 from ui.generated.searchVillagerGenerated import Ui_SearchVillager
 
-class SearchVillagerWidget(BaseWidget):
-    ui: Ui_SearchVillager
+# type
+from services.appServices import AppServices
 
-    def __init__(self, villager_service, librarian_service):
-        super().__init__(Ui_SearchVillager())
+class SearchVillagerWidget(QWidget):
+
+    def __init__(self, services: AppServices):
+        super().__init__()
+        self.ui = Ui_SearchVillager()
+        self.ui.setupUi(self) # type: ignore[reportUnknownMemberType]
 
         self.librarians = None
 
-        self.villager_service = villager_service
-        self.librarian_service = librarian_service
+        self.services = services
 
         self.bind_event()
 
@@ -35,12 +39,12 @@ class SearchVillagerWidget(BaseWidget):
         y = self.ui.posYSpinBox.value()
         z = self.ui.posZSpinBox.value()
 
-        villagers = self.villager_service.get_villagers_by_block(x, y, z)
-        self.librarians = self.librarian_service.get_librarians(villagers)
+        villagers = self.services.villager_service.get_villagers_by_block(self.services.world_service.context.get_world(), x, y, z)
+        self.librarians = self.services.librarian_service.get_librarians(villagers)
         self.ui.librarianSelectorComboBox.clear()
         for librarian in self.librarians:
             self.ui.librarianSelectorComboBox.addItem(
-                self.librarian_service.format_display(librarian),
+                self.services.librarian_service.format_display(librarian),
                 librarian
             )
         self.ui.librarianSelectorComboBox.setCurrentIndex(-1)

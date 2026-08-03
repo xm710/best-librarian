@@ -1,19 +1,19 @@
+from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import Signal
 
-from ui.widgets.baseWidget import BaseWidget
 from ui.generated.worldImportGenerated import Ui_WorldImport
 from ui.dialog.confirmDialog import select_world
 
 
-class WorldImportWidget(BaseWidget):
-    ui: Ui_WorldImport
-
+class WorldImportWidget(QWidget):
     world_loaded = Signal()
 
-    def __init__(self, world_service):
-        super().__init__(Ui_WorldImport())
+    def __init__(self, app_service):
+        super().__init__()
+        self.ui = Ui_WorldImport()
+        self.ui.setupUi(self) # type: ignore[reportUnknownMemberType]
 
-        self.world_service = world_service
+        self.app_service = app_service
         
         self.bind_event()
 
@@ -36,5 +36,5 @@ class WorldImportWidget(BaseWidget):
 
     def load_button_on_click(self):
         world_path = self.ui.worldFolderPathLineEdit.text()
-        self.world_service.open_world(world_path)
+        self.app_service.world_service.open_world(world_path)
         self.world_loaded.emit()

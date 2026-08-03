@@ -1,19 +1,28 @@
+from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import QStringListModel
 
-from ui.widgets.baseWidget import BaseWidget
 from ui.generated.modifyLibrarianGenerated import Ui_ModifyLibrarian
 
 from lib.minecraft.enchantment import get_max_price, get_min_price
 
-class ModifyLibrarianWidget(BaseWidget):
-    ui: Ui_ModifyLibrarian
+# type
+from typing import cast
 
-    def __init__(self, librarian_service):
-        super().__init__(Ui_ModifyLibrarian())
+from PySide6.QtWidgets import QLineEdit, QSpinBox, QPushButton, QLayoutItem
+
+from models.recipeModel import DisplayRecipe
+from services.appServices import AppServices
+
+class ModifyLibrarianWidget(QWidget):
+    def __init__(self, services: AppServices):
+        super().__init__()
+        self.ui = Ui_ModifyLibrarian()
+        self.ui.setupUi() # type: ignore[reportUnknownMemberType]
+
         self.enchantsListViewModel = QStringListModel([])
         self.ui.enchantsListView.setModel(self.enchantsListViewModel)
 
-        self.librarian_service = librarian_service
+        self.services = services
 
         self.recipeLV1 = RecipeDataManager(
             self.ui.enchantmentNameLV1, self.ui.enchantmentLevelLV1, self.ui.enchantedBookPriceLV1
@@ -34,7 +43,8 @@ class ModifyLibrarianWidget(BaseWidget):
         ui = self.ui
 
         for i in range(ui.gridLayout.count()):
-            ui.gridLayout.itemAt(i).widget().setChecked(False)
+            layout_item = cast(QLayoutItem, ui.gridLayout.itemAt(i))
+            cast(QPushButton, layout_item.widget()).setChecked(False)
 
         self.enchantsListViewModel.setStringList([])
 
@@ -59,18 +69,18 @@ class ModifyLibrarianWidget(BaseWidget):
             self.recipeLV4.enchantment_level_on_change
         )
 
-    def display_recipe(self, display_recipe, librarian_level):
+    def display_recipe(self, display_recipe: DisplayRecipe, librarian_level: int):
         recipt_data_manager = getattr(self, f"recipeLV{librarian_level}")
         recipt_data_manager.set(display_recipe)
 
-    def display_recipes(self, display_recipes):
+    def display_recipes(self, display_recipes: list[DisplayRecipe]):
         self.reset()
         for librarian_level, display_recipe in enumerate(display_recipes, 1):
             self.display_recipe(display_recipe, librarian_level)
         
 
 class RecipeDataManager():
-    def __init__(self, enchantment_name, enchantment_level, enchanted_book_price):
+    def __init__(self, enchantment_name: QLineEdit, enchantment_level: QSpinBox, enchanted_book_price: QSpinBox):
         self.enchantment_name = enchantment_name
         self.enchantment_level = enchantment_level
         self.enchanted_book_price = enchanted_book_price
@@ -89,19 +99,21 @@ class RecipeDataManager():
         self.enchanted_book_price.setValue(0)
         self.enchanted_book_price.setMaximum(0)
 
-    def set(self, display_recipe):
+    def set(self, display_recipe: DisplayRecipe):
         self.is_treasure = display_recipe.is_treasure
 
-        self.enchantment_level.setMinimum(display_recipe.min_level)
-        self.enchantment_level.setMaximum(display_recipe.max_level)
-        self.enchanted_book_price.setMinimum(display_recipe.min_price)
-        self.enchanted_book_price.setMaximum(display_recipe.max_price)
+        self.enchantment_level.setMinimum(cast(int, display_recipe.min_level))
+        self.enchantment_level.setMaximum(cast(int, display_recipe.max_level))
+        self.enchanted_book_price.setMinimum(cast(int, display_recipe.min_price))
+        self.enchanted_book_price.setMaximum(cast(int, display_recipe.max_price))
 
-        self.enchantment_name.setText(display_recipe.name)
-        self.enchantment_level.setValue(display_recipe.level)
-        self.enchanted_book_price.setValue(display_recipe.price)
+        self.enchantment_name.setText(cast(str, display_recipe.name))
+        self.enchantment_level.setValue(cast(int, display_recipe.level))
+        self.enchanted_book_price.setValue(cast(int, display_recipe.price))
 
     def enchantment_level_on_change(self):
+        self.is_treasure = cast(bool, self.is_treasure)
+
         self.enchanted_book_price.setMinimum(
             get_min_price(self.enchantment_level.value(), self.is_treasure)
         )

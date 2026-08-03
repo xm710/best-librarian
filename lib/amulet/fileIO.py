@@ -1,14 +1,26 @@
 from amulet import load_level
 
-class World:
-    @staticmethod
-    def _open_world(path):
-        return load_level(path)
+# type
+from amulet.api.level import World
 
-    @staticmethod
-    def _close_world(world):
-        world.close()
+def open_world(path: str) -> World:
+    """
+    開啟以 path 為目標的世界
+    """
+    world = load_level(path)
 
-    @staticmethod
-    def _save_world(world):
-        world.save()
+    assert isinstance(world, World)
+
+    return world
+
+def close_world(world: World):
+    """
+    關閉 world
+    """
+    world.close()
+
+def save_world(world: World):
+    """
+    儲存 world
+    """
+    world.save() # type: ignore[reportUnknownMemberType]
