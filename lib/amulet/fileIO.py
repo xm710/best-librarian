@@ -13,14 +13,14 @@ def open_world(path: str) -> World:
     return world
 
 
-def close_world(world: World):
+def close_world(world: World) -> None:
     """
     關閉 world
     """
     world.close()
 
 
-def save_world(world: World):
+def save_world(world: World) -> None:
     """
     儲存 world
     """

@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMessageBox
 
 
-def wrong_level_file(error: Exception):
+def wrong_level_file(error: Exception) -> None:
     """
     打開檔案發生錯誤
     """

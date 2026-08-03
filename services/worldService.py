@@ -6,7 +6,7 @@ from ui.dialog.warningDialog import wrong_level_file
 
 
 class WorldService:
-    def __init__(self):
+    def __init__(self) -> None:
         self.context = WorldContext()
 
     def open_world(self, path: str) -> None:

@@ -5,10 +5,11 @@ from ui.generated.worldImportGenerated import Ui_WorldImport
 from ui.generated.searchVillagerGenerated import Ui_SearchVillager
 from ui.generated.modifyLibrarianGenerated import Ui_ModifyLibrarian
 
+from typing import Any
 
 def preview():
 
-    def createWidget(UI):
+    def createWidget(UI: Any):
         widget = QWidget()
         ui = UI()
         ui.setupUi(widget)
@@ -18,9 +19,9 @@ def preview():
     app = QApplication.instance() or QApplication([])
 
     mainWindowWidget, mainWindowUI = createWidget(Ui_MainWindow)
-    worldImportWidget, worldImportUI = createWidget(Ui_WorldImport)
+    worldImportWidget, _ = createWidget(Ui_WorldImport)
     searchVillagerWidget, searchVillagerUI = createWidget(Ui_SearchVillager)
-    modifyLibrarianWidget, modifyLirarianUI = createWidget(Ui_ModifyLibrarian)
+    modifyLibrarianWidget, _ = createWidget(Ui_ModifyLibrarian)
 
     mainWindowUI.WorldImportLayout.addWidget(worldImportWidget)
     mainWindowUI.SearchVillagerLayout.addWidget(searchVillagerWidget)

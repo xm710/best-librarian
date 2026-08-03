@@ -12,29 +12,30 @@ from ui.widgets.worldImportWidget import WorldImportWidget
 
 
 class MainWindow(QWidget):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)  # type: ignore[reportUnknownMemberType]
 
-        self.services = AppServices()
+        self.services = AppServices() # 初始化服務
 
-        self.worldImportWidget = WorldImportWidget(self.services)
+        self.worldImportWidget = WorldImportWidget(self.services) # 初始化 Widgets
         self.searchVillagerWidget = SearchVillagerWidget(self.services)
         self.modifyLibrarianWidget = ModifyLibrarianWidget(self.services)
 
         self.combine_widgets()
+
         self.reset()
 
         self.searchVillagerWidget.setEnabled(False)
         self.modifyLibrarianWidget.setEnabled(False)
 
-        self.bind_event()
+        self.bind_event() # 開始監聽事件
 
-    def combine_widgets(self):
+    def combine_widgets(self) -> None:
         """
-        合併 Widgets
+        組合 Widgets
         """
         self.ui.WorldImportLayout.addWidget(self.worldImportWidget)
         self.ui.SearchVillagerLayout.addWidget(self.searchVillagerWidget)
@@ -42,7 +43,7 @@ class MainWindow(QWidget):
             self.modifyLibrarianWidget
         )
 
-    def reset(self):
+    def reset(self) -> None:
         """
         重置所有元件
         """
@@ -50,7 +51,7 @@ class MainWindow(QWidget):
         self.searchVillagerWidget.reset()
         self.modifyLibrarianWidget.reset()
 
-    def bind_event(self):
+    def bind_event(self) -> None:
         """
         綁定事件
         """
@@ -59,23 +60,23 @@ class MainWindow(QWidget):
             self.librarian_selector_combo_box_index_on_change
         )
 
-    def closeEvent(self, event: QCloseEvent):
+    def closeEvent(self, event: QCloseEvent) -> None:
         """
-        關閉事件 當程式關閉就會觸發
+        當關閉程式觸發 儲存並關閉世界
         """
         self.services.world_service.close_world()
 
         event.accept()
 
-    def on_world_loaded(self):
+    def on_world_loaded(self) -> None:
         """
-        成功載入世界事件 當載入按鈕按下 並成功載入世界就會觸發
+        當載入按鈕按下 並成功載入世界觸發 將 searchVillagerWidger 啟用 
         """
         self.searchVillagerWidget.setEnabled(True)
 
-    def librarian_selector_combo_box_index_on_change(self):
+    def librarian_selector_combo_box_index_on_change(self) -> None:
         """
-        圖書管理員選取器選擇變動事件 當選取了其中一個圖書管理員就會觸發
+        當選擇 Combo Box 資料 或是 初始化清單 時觸發
         """
         if (
             current_librarian := self.searchVillagerWidget.ui.librarianSelectorComboBox.currentData()
@@ -91,8 +92,7 @@ class MainWindow(QWidget):
                 self.services.librarian_service.build_display_recipe(recipe)
                 for recipe in enchanted_book_recipes
             ]
-            self.modifyLibrarianWidget.display_recipes(display_recipes)
-
+            self.modifyLibrarianWidget.display_recipes(display_recipes) # 設定UI介面上顯示的交易
         else:
-            self.modifyLibrarianWidget.reset()
+            self.modifyLibrarianWidget.reset() # 當沒有資料 則重置UI介面顯示的交易
             self.modifyLibrarianWidget.setEnabled(False)

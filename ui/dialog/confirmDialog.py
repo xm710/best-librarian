@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QFileDialog
 
 
-def select_world():
+def select_world() -> str:
     """
     選擇世界資料夾
     """

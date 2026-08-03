@@ -1,24 +1,14 @@
-from enchantmentModel import Enchantment
+from models.enchantmentModel import Enchantment
 
 
 class Item:
-    def __init__(self):
-        self.namespace_name: str | None = None
-        self.count: int | None = None
-
-    def __repr__(self):
-        return f"namespace_name:{self.namespace_name} x{self.count}"
+    def __init__(self, namespace_name: str, count: int) -> None:
+        self.namespace_name = namespace_name
+        self.count = count
 
 
 class EnchantedBook(Item):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, enchantments: list[Enchantment]) -> None:
+        super().__init__("minecraft:enchanted_book", 1)
 
-        self.namespace_name = "minecraft:enchanted_book"
-
-        self.enchantments: list[Enchantment] = []
-
-    def __repr__(self):
-        enchantments_str = f"{[enchantment for enchantment in self.enchantments]}"
-
-        return super().__repr__() + f" {enchantments_str}"
+        self.enchantments = enchantments

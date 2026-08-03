@@ -4,7 +4,7 @@ from services.worldService import WorldService
 
 
 class AppServices:
-    def __init__(self):
+    def __init__(self) -> None:
         self.world_service = WorldService()
         self.villager_service = VillagerService()
         self.librarian_service = LibrarianService()

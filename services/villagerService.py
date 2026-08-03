@@ -9,7 +9,7 @@ class VillagerService:
     def __init__(self):
         pass
 
-    def get_villagers_by_block(self, world: World, x: int, y: int, z: int):
+    def get_villagers_by_block(self, world: World, x: int, y: int, z: int) -> list[Entity]:
         """
         由方塊座標搜尋村民
         """
@@ -20,7 +20,7 @@ class VillagerService:
 
         return villagers
 
-    def _filter_villagers(self, entities: EntityList):
+    def _filter_villagers(self, entities: EntityList) -> list[Entity]:
         """
         篩選出村民
         """
@@ -32,7 +32,7 @@ class VillagerService:
 
     def _filter_villagers_by_block(
         self, villagers: list[Entity], x: int, y: int, z: int
-    ):
+    ) -> list[Entity]:
         """
         篩選出位於特定位置的村民
         """
