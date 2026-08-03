@@ -1,8 +1,8 @@
-from PySide6.QtWidgets import QWidget
 from PySide6.QtCore import Signal
+from PySide6.QtWidgets import QWidget
 
-from ui.generated.worldImportGenerated import Ui_WorldImport
 from ui.dialog.confirmDialog import select_world
+from ui.generated.worldImportGenerated import Ui_WorldImport
 
 
 class WorldImportWidget(QWidget):
@@ -11,10 +11,10 @@ class WorldImportWidget(QWidget):
     def __init__(self, app_service):
         super().__init__()
         self.ui = Ui_WorldImport()
-        self.ui.setupUi(self) # type: ignore[reportUnknownMemberType]
+        self.ui.setupUi(self)  # type: ignore[reportUnknownMemberType]
 
         self.app_service = app_service
-        
+
         self.bind_event()
 
     def reset(self):
@@ -23,12 +23,8 @@ class WorldImportWidget(QWidget):
         self.ui.loadButton.setChecked(False)
 
     def bind_event(self):
-        self.ui.browseButton.clicked.connect(
-            self.browser_button_on_click
-        )
-        self.ui.loadButton.clicked.connect(
-            self.load_button_on_click
-        )
+        self.ui.browseButton.clicked.connect(self.browser_button_on_click)
+        self.ui.loadButton.clicked.connect(self.load_button_on_click)
 
     def browser_button_on_click(self):
         world_path = select_world()

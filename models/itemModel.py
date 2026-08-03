@@ -1,15 +1,14 @@
-#type
-from typing import List
-
 from enchantmentModel import Enchantment
 
-class Item():
+
+class Item:
     def __init__(self):
         self.namespace_name: str | None = None
-        self.count         : int | None = None
+        self.count: int | None = None
 
     def __repr__(self):
         return f"namespace_name:{self.namespace_name} x{self.count}"
+
 
 class EnchantedBook(Item):
     def __init__(self):
@@ -17,7 +16,7 @@ class EnchantedBook(Item):
 
         self.namespace_name = "minecraft:enchanted_book"
 
-        self.enchantments: List[Enchantment] = []
+        self.enchantments: list[Enchantment] = []
 
     def __repr__(self):
         enchantments_str = f"{[enchantment for enchantment in self.enchantments]}"

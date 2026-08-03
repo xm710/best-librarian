@@ -1,5 +1,5 @@
-# type
 from amulet_nbt import CompoundTag
+
 
 def fast_get_compound(tag: CompoundTag, keys: list[str]) -> CompoundTag:
     """

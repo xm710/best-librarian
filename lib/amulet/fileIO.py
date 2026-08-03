@@ -1,7 +1,6 @@
 from amulet import load_level
-
-# type
 from amulet.api.level import World
+
 
 def open_world(path: str) -> World:
     """
@@ -13,14 +12,16 @@ def open_world(path: str) -> World:
 
     return world
 
+
 def close_world(world: World):
     """
     關閉 world
     """
     world.close()
 
+
 def save_world(world: World):
     """
     儲存 world
     """
-    world.save() # type: ignore[reportUnknownMemberType]
+    world.save()  # type: ignore[reportUnknownMemberType]

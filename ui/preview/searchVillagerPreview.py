@@ -14,10 +14,11 @@ def preview():
     modifywidget = QWidget()
     modifyUI = Ui_ModifyLibrarian()
     modifyUI.setupUi(modifywidget)
-    
+
     ui.modifyVillagerLayout.addWidget(modifywidget)
     widget.show()
     app.exec()
+
 
 if __name__ == "__main__":
     preview()

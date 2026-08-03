@@ -2,6 +2,7 @@ from PySide6.QtWidgets import QApplication, QWidget
 
 from ui.generated.modifyLibrarianGenerated import Ui_ModifyLibrarian
 
+
 def preview():
     app = QApplication.instance() or QApplication([])
 

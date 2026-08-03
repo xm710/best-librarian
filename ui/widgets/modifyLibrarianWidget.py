@@ -1,23 +1,19 @@
-from PySide6.QtWidgets import QWidget
-from PySide6.QtCore import QStringListModel
-
-from ui.generated.modifyLibrarianGenerated import Ui_ModifyLibrarian
-
-from lib.minecraft.enchantment import get_max_price, get_min_price
-
-# type
 from typing import cast
 
-from PySide6.QtWidgets import QLineEdit, QSpinBox, QPushButton, QLayoutItem
+from PySide6.QtCore import QStringListModel
+from PySide6.QtWidgets import QLayoutItem, QLineEdit, QPushButton, QSpinBox, QWidget
 
+from lib.minecraft.enchantment import get_max_price, get_min_price
 from models.recipeModel import DisplayRecipe
 from services.appServices import AppServices
+from ui.generated.modifyLibrarianGenerated import Ui_ModifyLibrarian
+
 
 class ModifyLibrarianWidget(QWidget):
     def __init__(self, services: AppServices):
         super().__init__()
         self.ui = Ui_ModifyLibrarian()
-        self.ui.setupUi() # type: ignore[reportUnknownMemberType]
+        self.ui.setupUi()  # type: ignore[reportUnknownMemberType]
 
         self.enchantsListViewModel = QStringListModel([])
         self.ui.enchantsListView.setModel(self.enchantsListViewModel)
@@ -25,16 +21,24 @@ class ModifyLibrarianWidget(QWidget):
         self.services = services
 
         self.recipeLV1 = RecipeDataManager(
-            self.ui.enchantmentNameLV1, self.ui.enchantmentLevelLV1, self.ui.enchantedBookPriceLV1
+            self.ui.enchantmentNameLV1,
+            self.ui.enchantmentLevelLV1,
+            self.ui.enchantedBookPriceLV1,
         )
         self.recipeLV2 = RecipeDataManager(
-            self.ui.enchantmentNameLV2, self.ui.enchantmentLevelLV2, self.ui.enchantedBookPriceLV2
+            self.ui.enchantmentNameLV2,
+            self.ui.enchantmentLevelLV2,
+            self.ui.enchantedBookPriceLV2,
         )
         self.recipeLV3 = RecipeDataManager(
-            self.ui.enchantmentNameLV3, self.ui.enchantmentLevelLV3, self.ui.enchantedBookPriceLV3
+            self.ui.enchantmentNameLV3,
+            self.ui.enchantmentLevelLV3,
+            self.ui.enchantedBookPriceLV3,
         )
         self.recipeLV4 = RecipeDataManager(
-            self.ui.enchantmentNameLV4, self.ui.enchantmentLevelLV4, self.ui.enchantedBookPriceLV4
+            self.ui.enchantmentNameLV4,
+            self.ui.enchantmentLevelLV4,
+            self.ui.enchantedBookPriceLV4,
         )
 
         self.bind_event()
@@ -77,10 +81,15 @@ class ModifyLibrarianWidget(QWidget):
         self.reset()
         for librarian_level, display_recipe in enumerate(display_recipes, 1):
             self.display_recipe(display_recipe, librarian_level)
-        
 
-class RecipeDataManager():
-    def __init__(self, enchantment_name: QLineEdit, enchantment_level: QSpinBox, enchanted_book_price: QSpinBox):
+
+class RecipeDataManager:
+    def __init__(
+        self,
+        enchantment_name: QLineEdit,
+        enchantment_level: QSpinBox,
+        enchanted_book_price: QSpinBox,
+    ):
         self.enchantment_name = enchantment_name
         self.enchantment_level = enchantment_level
         self.enchanted_book_price = enchanted_book_price

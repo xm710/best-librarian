@@ -1,7 +1,7 @@
-# type
 from typing import cast
 
 from amulet.api.level import World
+
 
 class WorldContext:
     def __init__(self) -> None:
@@ -9,3 +9,6 @@ class WorldContext:
 
     def get_world(self):
         return cast(World, self._world)
+
+    def set_world(self, world: World):
+        self._world = world

@@ -14,7 +14,7 @@ def preview():
         ui.setupUi(widget)
 
         return widget, ui
-    
+
     app = QApplication.instance() or QApplication([])
 
     mainWindowWidget, mainWindowUI = createWidget(Ui_MainWindow)

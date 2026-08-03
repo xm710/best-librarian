@@ -4,6 +4,7 @@ def block_to_chunk(x: int, z: int):
     """
     return x // 16, z // 16
 
+
 def position_to_block(x: float, y: float, z: float):
     """
     將生物座標轉為方塊座標
